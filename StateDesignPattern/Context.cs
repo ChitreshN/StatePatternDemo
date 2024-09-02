@@ -20,7 +20,6 @@ namespace State.Structural
             set
             {
                 state = value;
-                Console.WriteLine("State: " + state.GetType().Name);
             }
         }
 
