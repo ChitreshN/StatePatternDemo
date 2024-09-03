@@ -1,4 +1,4 @@
-using State.Structural;
+﻿using State.Structural;
 
 namespace State.UnitTests
 {
@@ -7,11 +7,11 @@ namespace State.UnitTests
         [Fact]
         public void StateChangeCheck()
         {
-            var context = new Context(new ConcreteStateA());
+            var context = new Context( new ConcreteStateA() );
             context.Request();
-            Assert.Same(context.State.GetType(),typeof(ConcreteStateB));
+            Assert.Same( context.State.GetType() , typeof( ConcreteStateB ) );
             context.Request();
-            Assert.Same(context.State.GetType(),typeof(ConcreteStateA));
+            Assert.Same( context.State.GetType() , typeof( ConcreteStateA ) );
         }
     }
 }

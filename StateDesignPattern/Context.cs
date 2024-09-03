@@ -1,31 +1,23 @@
-namespace State.Structural
+﻿namespace State.Structural
 {
     /// <summary>
     /// The 'Context' class
     /// </summary>
     public class Context
     {
-        State state;
 
         // Constructor
-        public Context(State state)
+        public Context( State state )
         {
-            this.State = state;
+            State = state;
         }
 
         // Gets or sets the state
-        public State State 
-        {
-            get { return state; }
-            set
-            {
-                state = value;
-            }
-        }
+        public State State { get; set; }
 
         public void Request()
         {
-            state.Handle(this);
+            State.Handle( this );
         }
     }
 }
